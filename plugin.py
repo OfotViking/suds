@@ -780,8 +780,8 @@ class Suds(callbacks.Plugin):
         if commandName == 'CmdPause':
             pass
 
-        logMessage = '<COMMAND> Frame: %s Name: \'%s\' Command: %s Tile: %s Param1: %s Param2: %s Text: \'%s\'' % (
-            frame, name, commandName, tile, param1, param2, text)
+        logMessage = '%s <COMMAND> Frame: %s Name: \'%s\' Command: %s Tile: %s Param1: %s Param2: %s Text: \'%s\'' % (
+            connChan, frame, name, commandName, tile, param1, param2, text)
         conn.logger.info(logMessage)
 
 
